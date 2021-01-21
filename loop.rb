@@ -1,6 +1,6 @@
 # 'main' loop
 ans = ''
-puts( "Run Test 1, 2, 3, 4, 5?\nWrite a number or 'q' to quit. Then press [Enter] key\n\n" )
+puts( "Select what to do 1-5, q to quit\n\n" )
 until ans == 'q' do  
   puts( "[ Enter 1, 2, 3, 4, 5 or 'q'? ]" )
   print( "> " )
