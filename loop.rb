@@ -1,8 +1,21 @@
-# 'main' loop
+def test1()
+  puts( "test1" )
+end
+
+def test2()
+  puts( "test2" )
+end
+
+def test3()
+  puts( "test3" )
+end
+
+# 'menu' loop
 ans = ''
-puts( "Select what to do 1-5, q to quit\n\n" )
+puts( "Untitled goose sorter.\n\n" )
+puts( "1. Status\n2. Manage birds\n3. Manage farm areas\n\n" )
 until ans == 'q' do  
-  puts( "[ Enter 1, 2, 3, 4, 5 or 'q'? ]" )
+  puts( "[ Enter 1, 2, 3 or 'q'? ]" )
   print( "> " )
   ans = gets[0].chr().downcase()
   case ans 
