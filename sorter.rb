@@ -58,11 +58,20 @@ def bird_menu()
           puts( "[ Enter 1, 2, 3 or 'b'? ]" )
           print( "> " )
           ch = gets[0].chr().downcase()
+          
           case ch
-            when '1' then puts("Goose")
+            when '1' then
+              puts("Name your goose: ") 
+              name = gets
+              puts("Describe your goose: ")
+              description = gets
+              goose = Bird.new(name, description, "goose")
+              puts("Goose: #{goose.inspect}")
+
             when '2' then puts("Duck")
             when '3' then puts("Chicken")
           end
+        
         end
 
       when '2' then puts("remove")
@@ -83,11 +92,13 @@ def farm_menu()
     puts( "[ Enter 1, 2, 3 or 'b'? ]" )
     print( "> " )
     ans = gets[0].chr().downcase()
+    
     case ans 
       when '1' then puts("add")
       when '2' then puts("remove")
       when '3' then puts("move")
     end	  
+  
   end
   puts( "Untitled goose sorter.\n\n" )
   puts( "1. Status\n2. Manage birds\n3. Manage farm areas\n\n" )
