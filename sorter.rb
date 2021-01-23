@@ -7,7 +7,7 @@ class Thing
     @name = aName.capitalize
     @description = aDescription
     @@num_things += 1
-    puts("Thing.initialize: #{self.inspect}\n\n")
+    puts( "Thing.initialize: #{self.inspect}\n\n" )
   end
 
 end
@@ -19,7 +19,7 @@ class Place < Thing
     super( aName, aDescription )
     @size = sizeIs
     @predator_proof = predatorProof
-    puts("Place: #{self.inspect}\n\n")
+    puts( "init.Place: #{self.inspect}\n\n" )
   end
 
 end
@@ -30,14 +30,14 @@ class Bird < Thing
   def initialize( aName, aDescription, isSpecies )
     super( aName, aDescription )
     @species = isSpecies
-    puts("Bird: #{self.inspect}\n\n")
+    puts( "init.Bird: #{self.inspect}\n\n" )
   end
 
 end
 
 # def menu options
 def status_menu()
-  puts( "test1" )
+  puts( "Farm Status" )
 end
 
 # bird manage menu
@@ -61,21 +61,21 @@ def bird_menu()
           
           case ch
             when '1' then
-              puts("Name your goose: ") 
+              puts( "Name your goose: " ) 
               name = gets
-              puts("Describe your goose: ")
+              puts( "Describe your goose: " )
               description = gets
               goose = Bird.new(name, description, "goose")
               puts("Goose: #{goose.inspect}")
 
-            when '2' then puts("Duck")
-            when '3' then puts("Chicken")
+            when '2' then puts( "Duck" )
+            when '3' then puts( "Chicken" )
           end
         
         end
 
-      when '2' then puts("remove")
-      when '3' then puts("move")
+      when '2' then puts( "remove" )
+      when '3' then puts( "move" )
     end	  
   end
   
@@ -94,9 +94,9 @@ def farm_menu()
     ans = gets[0].chr().downcase()
     
     case ans 
-      when '1' then puts("add")
-      when '2' then puts("remove")
-      when '3' then puts("move")
+      when '1' then puts( "add" )
+      when '2' then puts( "remove" )
+      when '3' then puts( "move" )
     end	  
   
   end
