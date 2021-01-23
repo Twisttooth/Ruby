@@ -110,6 +110,13 @@ def farm_menu()
     
     case ans 
       when '1' then puts( "add" )
+        puts( "Name your coop: " ) 
+        name = gets
+        puts( "Describe your coop: " )
+        description = gets
+        coop = Place.new(name, description, 20, TRUE)
+        puts("New Coop: #{coop.inspect}")
+
       when '2' then puts( "remove" )
       when '3' then puts( "move" )
     end	  
