@@ -54,6 +54,7 @@ def bird_menu()
       when '1' then
         ch = ''
         puts( "Goose, duck, or Chicken?" )
+        puts( "1. Goose\n2. Duck\n3. Chicken" )
         until ch == 'b' do
           puts( "[ Enter 1, 2, 3 or 'b'? ]" )
           print( "> " )
@@ -68,8 +69,22 @@ def bird_menu()
               goose = Bird.new(name, description, "goose")
               puts("Goose: #{goose.inspect}")
 
-            when '2' then puts( "Duck" )
+            when '2' then
+              puts( "Name your duck: " ) 
+              name = gets
+              puts( "Describe your duck: " )
+              description = gets
+              duck = Bird.new(name, description, "duck")
+              puts("Duck: #{duck.inspect}")
+
             when '3' then puts( "Chicken" )
+              puts( "Name your chicken: " ) 
+              name = gets
+              puts( "Describe your chicken: " )
+              description = gets
+              chicken = Bird.new(name, description, "chicken")
+              puts("Chicken: #{chicken.inspect}")
+
           end
         
         end
