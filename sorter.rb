@@ -10,6 +10,14 @@ class Thing
     puts( "Thing.initialize: #{self.inspect}\n\n" )
   end
 
+  def things
+    return @@num_things
+  end
+
+  def things=(num)
+    @things = num
+  end
+
 end
 
 # define Place class for coops and pastures
@@ -37,7 +45,13 @@ end
 
 # def menu options
 def status_menu()
+  luku = Thing.new("things", "amount of things")
+
   puts( "Farm Status" )
+  puts( "Things around the farm: #{(luku.things - 1) / 2}\n\n" )
+
+  puts( "Untitled goose sorter.\n\n" )
+  puts( "1. Status\n2. Manage birds\n3. Manage farm areas\n\n" )
 end
 
 # bird manage menu
