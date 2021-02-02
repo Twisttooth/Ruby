@@ -45,6 +45,13 @@ p( sorted_hash(hnew) )
 puts( "\nBirds:\n" )
 p( sorted_hash(h1) )
 
-h1['new bird'] = 'a new born chick'
+puts( "\nadd bird:" )
+puts( "\nGoose, Duck, or Chicken?\n" )
+birdspecies = gets.chop
+puts( "Whats their name?\n" )
+namebird = gets.chop
+
+addbird = Bird.new(namebird, birdspecies)
+h1[addbird.name] = addbird.species
 
 p( sorted_hash(h1) )
