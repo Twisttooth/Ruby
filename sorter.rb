@@ -100,9 +100,11 @@ def bird_menu()
               puts("Chicken: #{chicken.inspect}")
 
           end
-        
+          puts( "Goose, duck, or Chicken?" )
+          puts( "1. Goose\n2. Duck\n3. Chicken" )
         end
-
+        puts( "Manage birds\n\n" )
+        puts( "1. Add Bird\n2. Remove Bird\n3. Move Bird\n\n" )
       when '2' then puts( "remove" )
       when '3' then puts( "move" )
     end	  
