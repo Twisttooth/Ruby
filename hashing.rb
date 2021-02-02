@@ -28,8 +28,8 @@ h1 = {
 	newbird4.name=>newbird4.species 
 	}
 	
-h2 = {'Coop name1'=>'coop', 'Coop name2'=>'coop', 'Coop name3'=> 'coop'}
-h3 = {'Pasture name1'=>'pasture', 'Pasture name2'=>'pasture', 'Pasture name3'=> 'pasture'}
+h2 = {'Goose shed'=>'coop', 'Duck coop'=>'coop', 'Chicken coop'=> 'coop'}
+h3 = {'Pasture by the pond'=>'pasture', 'Pasture in the garden'=>'pasture', 'Winter pasture'=> 'pasture'}
 
 hnew = (h2.merge(h3))
 
