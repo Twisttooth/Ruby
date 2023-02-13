@@ -1,2 +1,0 @@
-example words for passphrases, you really should make your own file for better ones.
-here I test if the cleaning of special characters works, along with separating the words with split, etc.
