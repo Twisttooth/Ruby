@@ -12,6 +12,7 @@
 test*
 /.vscode
 *.txt
+*.pdf
 
 # Used by dotenv library to load environment variables.
 # .env
