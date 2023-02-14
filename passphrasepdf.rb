@@ -24,7 +24,7 @@ class PasswordGenerator
     end
 
     passphrase = []
-    @words.map { |w| w.tr('åäö', 'aao').tr('^a-zA-Z0-9', '') }
+    @words.map { |w| w.tr('åäö', 'aao').tr('^a-zA-Z', '') }
           .select { |w| w.size >= 5 }
           .sample(number_of_words).each do |word|
       new_word = ""
