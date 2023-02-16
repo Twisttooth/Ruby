@@ -18,7 +18,7 @@ class PasswordGenerator
     end
   end
 
-  def generate_password(number_of_words, capitalization_probability = 0.1)
+  def generate_password(number_of_words, capitalization_probability = 0.1, replace_probability = 0.1)
     if @words.empty?
       load_words
     end
@@ -31,6 +31,17 @@ class PasswordGenerator
       word.each_char do |c|
         if rand < capitalization_probability
           new_word << c.upcase
+        elsif rand < replace_probability
+          case c
+          when "a"
+            new_word << "4"
+          when "i"
+            new_word << "1"
+          when "e"
+            new_word << "3"
+          else
+            new_word << c
+          end
         else
           new_word << c.downcase
         end
@@ -38,7 +49,7 @@ class PasswordGenerator
       passphrase << new_word
     end
     passphrase.join('-')
-  end
+end
 end
 
 generator = PasswordGenerator.new(ARGV[0])
