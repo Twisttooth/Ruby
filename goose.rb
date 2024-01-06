@@ -1,3 +1,8 @@
+
+# Generates a random ASCII art of a goose.
+
+  # Returns:
+  # - A string containing the ASCII art of a goose.
 class GooseGenerator
   def draw
     if rand(2) == 0

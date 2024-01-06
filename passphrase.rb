@@ -1,3 +1,4 @@
+
 words = []
 
 File.open('words.txt', 'r') do |file|
