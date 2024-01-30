@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # Generates a passphrase by randomly selecting words from a given list of words
 # and joining them with hyphens.
 #

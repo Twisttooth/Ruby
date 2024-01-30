@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'fileutils'
 require 'exifr/jpeg' # Add the import statement for the EXIFR module
 
